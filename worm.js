@@ -13,14 +13,15 @@ export async function main(ns) {
   let currentExploits = 0 // Counter for number of exploits currently in home directory.
 
   // Iterate through the available exploits within the game and check the home directory for their presence. This little fucker stumped me for like... 6 hours.
-  for (let kek of availableExploits) {
-    if (await ns.fileExists(kek, "home") == true) {
+  for (let exploits of availableExploits) {
+    if (await ns.fileExists(exploits, "home") == true) {
      currentExploits++
     };
   };
 
   ns.tprint("Beginning ping sweep...");  // Is it really a ping sweep if your targets are pre-defined? It sounds good, so who cares.
 
+  // I'm sure there's a more efficient way to do this but for now, this'll just burn through the pathetic weaklings, see if they're vulnerable and then execute the necessary functions to turbo yeet them.
   for (let victim of patheticVictims) {
     if (await ns.getServerRequiredHackingLevel(victim) <= hackingLevel && await ns.getServerNumPortsRequired(victim) <= currentExploits) {
       if (currentExploits == 0) {
