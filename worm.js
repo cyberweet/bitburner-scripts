@@ -28,29 +28,29 @@ export async function main(ns) {
     if (await ns.getServerRequiredHackingLevel(victim) <= hackingLevel && await ns.getServerNumPortsRequired(victim) <= currentExploits && await ns.hasRootAccess(victim) == false) {
       if (currentExploits == 0) {
         await ns.nuke(victim);
-
+        // I
       } else if (currentExploits == 1) {
         await ns.brutessh(victim);
         await ns.nuke(victim);
-
+        // Know
       } else if (currentExploits == 2) {
         await ns.brutessh(victim);
         await ns.ftpcrack(victim);
         await ns.nuke(victim);
-
+        // I'm
       } else if (currentExploits == 3) {
         await ns.brutessh(victim);
         await ns.ftpcrack(victim);
         await ns.relaysmtp(victim);
         await ns.nuke(victim);
-
+        // A
       } else if (currentExploits == 4) { 
         await ns.brutessh(victim);
         await ns.ftpcrack(victim);
         await ns.relaysmtp(victim);
         await ns.httpworm(victim);
         await ns.nuke(victim)
-
+        // Loser
       } else if (currentExploits == 5) {
         await ns.brutessh(victim);
         await ns.ftpcrack(victim);
