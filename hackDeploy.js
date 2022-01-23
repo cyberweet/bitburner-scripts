@@ -11,8 +11,10 @@ const hackScript = "diddler.script"
 export async function main(ns) {
 
   for (let victims of patheticVictims) {
-    await ns.scp(hackScript, "home", victims); // We're assuming you're running this from the home directory because where else would you be doing so.
-    ns.print("Copied script to " + victims); // Visual confirmation because I like validation.
+    if (await ns.fileExists(hackScript, victims) == false) {
+      await ns.scp(hackScript, "home", victims); // We're assuming you're running this from the home directory because where else would you be doing so.
+      ns.print("Copied script to " + victims); // Visual confirmation because I like validation.
+    };
   };
 
   for (let deployVictims of patheticVictims) {
