@@ -18,13 +18,17 @@ export async function main(ns) {
       ns.print("Copied script to " + victims); // Visual confirmation because I like validation.
     };
   };
-
+  
   // Basically, just like above, we're checking to see if it's rooted. If it is, great, lets execute the script that should already be present on the box.
   for (let deployVictims of patheticVictims) {
     if (await ns.hasRootAccess(deployVictims) == true) {
       const threads = Math.floor((ns.getServerMaxRam(deployVictims) - ns.getServerUsedRam(deployVictims)) / ns.getScriptRam(hackScript)); // This one, I took the easy route with the math. Truthfully, I suck a math. I copied it from a dev example lol.
-      ns.exec(hackScript, deployVictims, threads, deployVictims); // Note: The diddler script requires a hostname arg, even if executing against the localhost, so the 4th arg is just the hostname.
-      ns.print("Scripts activated on " + deployVictims);
-    }
-  }
+        if (threads > 0) {
+          ns.exec(hackScript, deployVictims, threads, deployVictims); // Note: The diddler script requires a hostname arg, even if executing against the localhost, so the 4th arg is just the hostname.
+          ns.print("Scripts activated on " + deployVictims);
+        } else {
+          ns.print("Looks to be maxed out.")
+        };
+    };
+  };
 };
