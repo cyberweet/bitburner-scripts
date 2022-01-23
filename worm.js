@@ -25,7 +25,7 @@ export async function main(ns) {
 
   // I'm sure there's a more efficient way to do this but for now, this'll just burn through the pathetic weaklings, see if they're vulnerable and then execute the necessary functions to turbo yeet them.
   for (let victim of patheticVictims) {
-    if (await ns.getServerRequiredHackingLevel(victim) <= hackingLevel && await ns.getServerNumPortsRequired(victim) <= currentExploits) {
+    if (await ns.getServerRequiredHackingLevel(victim) <= hackingLevel && await ns.getServerNumPortsRequired(victim) <= currentExploits && await ns.hasRootAccess(victim) == false) {
       if (currentExploits == 0) {
         await ns.nuke(victim);
 
@@ -61,7 +61,7 @@ export async function main(ns) {
       };
       ns.print("Cracked and hacked!")
     } else {
-      ns.print("Not hackable... yet...")
+      ns.print("Not hackable yet or already pwned.")
     };
   };
 };
