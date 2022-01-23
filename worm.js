@@ -21,7 +21,7 @@ export async function main(ns) {
     };
   };
 
-  ns.tprint("Beginning ping sweep...");  // Is it really a ping sweep if your targets are pre-defined? It sounds good, so who cares.
+  ns.print("Beginning ping sweep...");  // Is it really a ping sweep if your targets are pre-defined? It sounds good, so who cares.
 
   // I'm sure there's a more efficient way to do this but for now, this'll just burn through the pathetic weaklings, see if they're vulnerable and then execute the necessary functions to turbo yeet them.
   for (let victim of patheticVictims) {
@@ -59,9 +59,9 @@ export async function main(ns) {
         await ns.sqlinject(victim)
         await ns.nuke(victim)
       };
-      ns.tprint("Cracked and hacked!")
+      ns.print("Cracked and hacked!")
     } else {
-      ns.tprint("Not hackable... yet...")
+      ns.print("Not hackable... yet...")
     };
   };
 };
