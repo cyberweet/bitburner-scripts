@@ -4,7 +4,7 @@
 **/
 
 // Array of who to iterate through and smack around. I was going to automate the gathering but the scan() function doesn't have a depth param, so this is easier for now. Don't feel like writing a wholeass worm yet.
-const patheticVictims = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "hong-fang-tea", "harakiri-sushi", "iron-gym", "max-hardware", "zer0", "nectar-net", "CSEC", "neo-net", "silver-helix", "omega-net", "phantasy"];
+const patheticVictims = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "hong-fang-tea", "harakiri-sushi", "iron-gym", "max-hardware", "zer0", "nectar-net", "CSEC", "neo-net", "silver-helix", "omega-net", "phantasy", "avmnite-02h","the-hub", "comptek", "netlink", "johnson-ortho", "crush-fitness", "rothman-uni", "catalyst", "zb-institute", "I.I.I.I", "summit-uni"];
 
 export async function main(ns) {
   for (let victims of patheticVictims) {
