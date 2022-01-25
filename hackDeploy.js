@@ -4,7 +4,7 @@
 **/
 
 // Array of who to iterate through and smack around. I was going to automate the gathering but the scan() function doesn't have a depth param, so this is easier for now. Don't feel like writing a wholeass worm yet.
-const patheticVictims = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "hong-fang-tea", "harakiri-sushi", "iron-gym", "max-hardware", "zer0", "nectar-net", "CSEC", "neo-net", "silver-helix", "omega-net", "phantasy", "avmnite-02h","the-hub", "comptek", "netlink", "johnson-ortho", "crush-fitness", "rothman-uni", "catalyst", "zb-institute", "I.I.I.I", "summit-uni"];
+const patheticVictims = ["n00dles", "foodnstuff", "sigma-cosmetics", "joesguns", "hong-fang-tea", "harakiri-sushi", "iron-gym", "max-hardware", "zer0", "nectar-net", "CSEC", "neo-net", "silver-helix", "omega-net", "phantasy", "avmnite-02h","the-hub", "comptek", "netlink", "johnson-ortho", "crush-fitness", "rothman-uni", "catalyst", "zb-institute", "I.I.I.I", "summit-uni", "lexo-corp", "rho-construction", "millenium-fitness", "syscore", "aevum-police", "aerocorp", "alpha-ent", "galactic-cyber", "omnia", "icarus", "zb-def", "global-pharm", "unitalife", "defcomm", "snap-fitness", "deltaone", "univ-energy", "taiyang-digital", "nova-med", "solaris", "infocomm", "zeus-med"];
 
 const hackScript = "diddler.script"; // Yup, that's the name of my hack script. Don't judge me, it was 4 am.
 
